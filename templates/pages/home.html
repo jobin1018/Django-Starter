@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{%  block content %}
+
+{% if messages %}
+{% for message in messages %}
+<p class="alert alert-success">{{message}}</p>
+{% endfor %}
+{% endif %}
+
+<h1>Django Starter</h1>
+{% if user.is_authenticated %}
+<p>Welcome {{ user.username }} !!!</p>
+{% endif %}
+
+<div>
+    <h5>This starter pack contains the following,</h3>
+        <ul>
+            <li>
+                <p>Django 3.1</p>
+            </li>
+            <li>
+                <p>Custom user model</p>
+            </li>
+            <li>
+                <p>Django Allauth complete user system (login/logout/register)</p>
+            </li>
+            <li>
+                <p>Crispy forms</p>
+            </li>
+            <li>
+                <p>Bootstrap 4.5</p>
+            </li>
+
+        </ul>
+</div>
+
+{% endblock %}
